@@ -4,23 +4,34 @@ SQL + Power BI analysis of a telecom customer churn dataset containing 7,043 cus
 Dashboard Preview
 <img width="1314" height="709" alt="churn_rate_powerbi" src="https://github.com/user-attachments/assets/5125722b-5dd4-4666-a3d1-7654e808259c" />
 
+The Power BI dashboard provides a high-level view of customer churn and the key factors associated with it.
+
+The dashboard includes:
+- Overall churn KPIs
+- Churn rate by contract type
+- Churn rate by customer tenure
+- Churn rate by payment method
+
+These visuals help highlight the main drivers of churn and support retention-focused business decisions.
+
 ## Project Overview
 This project analyzes customer churn data from a telecom company to identify the main factors associated with customer loss. The goal was to simulate a real-world analytics workflow by cleaning raw data in SQL and building a Power BI dashboard to explore churn by contract type, customer tenure, and payment method.
 
 The analysis included cleaning and transforming the raw dataset, creating SQL queries and views for reporting, and visualizing key churn metrics in Power BI. The final dashboard highlights overall churn, churn by contract type, churn by customer tenure, and churn by payment method to support retention-focused business decisions.
 
 ## Business Questions
- - What contracts generate the most churn?
- - What customer tenure groups generate the most churn?
- - What payment methods generate the most churn?
+ - What contract types have the hughest churn?
+ - What customer tenure groups experience the most churn?
+ - What payment methods are associated with the highest churn?
 
 ## Tools Used
  - PostgreSQL
  - SQL
  - Power BI
+ - GitHub
 
  ## Dataset
- Online churn rate dataset containing 7,043 customers from a communications company Telco.
+Customer churn dataset containing 7,043 customers from a telecommunications company (Telco).
 
  Key columns include:
  - contract
@@ -34,14 +45,14 @@ The analysis included cleaning and transforming the raw dataset, creating SQL qu
  - Renamed columns to snake_case format for consistency
  - Trimmed whitespace from the total_charges column to remove hidden spaces that prevented numeric conversion.
  - Converted total_charges from text to numeric using CAST(NULLIF(TRIM(totalcharges), '') AS NUMERIC).
- - Replaced blank values in totalcharges with NULL to avoid type conversion errors.
+ - Replaced blank values in total_charges with NULL to avoid type conversion errors.
  - Created a binary churn indicator churn_flag where:
     - Yes = 1
     - No = 0
  - Created a clean analytical table (churn_clean) to separate raw data from analysis-ready data.
 
  ## SQL Analysis
-SQL queries and views were developed to calculate churn metrics and analyze key customer characteristics influencing churn. These included:
+SQL queries and views were developed to calculate churn metrics and analyze customer characteristics associated with churn. These included:
 
  - Overall churn KPIs (total customers, churn count, churn rate)
  - Contract type churn comparison
