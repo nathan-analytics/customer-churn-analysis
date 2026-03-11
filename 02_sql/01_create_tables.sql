@@ -1,0 +1,23 @@
+CREATE TABLE churn_raw (
+    customerID TEXT,
+    gender TEXT,
+    SeniorCitizen INT,
+    Partner TEXT,
+    Dependents TEXT,
+    tenure INT,
+    PhoneService TEXT,
+    MultipleLines TEXT,
+    InternetService TEXT,
+    OnlineSecurity TEXT,
+    OnlineBackup TEXT,
+    DeviceProtection TEXT,
+    TechSupport TEXT,
+    StreamingTV TEXT,
+    StreamingMovies TEXT,
+    Contract TEXT,
+    PaperlessBilling TEXT,
+    PaymentMethod TEXT,
+    MonthlyCharges NUMERIC,
+    TotalCharges TEXT,
+    Churn TEXT
+);
